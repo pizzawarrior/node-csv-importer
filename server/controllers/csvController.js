@@ -1,4 +1,4 @@
-import Employee from "../models/employeeModel";
+import Employee from "../models/employeeModel.js";
 import { createReadStream } from "fs";
 import { parse } from "fast-csv";
 import { Parser as CsvParser } from "json2csv";

@@ -13,6 +13,8 @@ export const sequelize = new Sequelize(
   }
 );
 
+console.log(dbConfig.DB); ///// DELETE ME
+
 sequelize
   .authenticate()
   .then(() => {
