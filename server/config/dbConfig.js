@@ -1,4 +1,4 @@
-const HOST = "db";
+const HOST = "db-1";
 const USER = "postgres";
 const PASSWORD = "LetsG000000";
 const DB = "csvdb";
