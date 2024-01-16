@@ -6,7 +6,7 @@ export const sequelize = new Sequelize(
   dbConfig.USER,
   dbConfig.PASSWORD,
   {
-    host: dbConfig.HOST,
+    host: dbConfig.HOST || "localhost",
     dialect: dbConfig.dialect,
     pool: dbConfig.pool,
     logging: console.log,
