@@ -13,7 +13,7 @@ export const sequelize = new Sequelize(
   }
 );
 
-console.log(dbConfig.DB); ///// DELETE ME
+console.log(`----------->>>>> HOST: ${dbConfig.HOST}`); ///// DELETE ME
 
 sequelize
   .authenticate()
