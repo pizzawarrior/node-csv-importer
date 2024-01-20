@@ -20,7 +20,8 @@ const getEmployees = (_req, res) => {
     .catch((err) => {
       res.status(500).send({
         message:
-          err.message || "Error while retrieving records from the database",
+          err.message ||
+          "Error occurred while retrieving records from the database",
       });
     });
 };

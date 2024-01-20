@@ -1,57 +1,68 @@
-import { Sequelize } from "sequelize";
+import { Sequelize, STRING } from "sequelize";
 import { sequelize } from "../database/index.js";
 
 const Employee = sequelize.define("employee", {
   id: {
-    type: Sequelize.STRING,
+    type: STRING,
     primaryKey: true,
   },
   name: {
-    type: Sequelize.STRING,
+    type: STRING,
   },
   email: {
-    type: Sequelize.STRING,
+    type: STRING,
   },
   username: {
-    type: Sequelize.STRING,
+    type: STRING,
   },
   dob: {
-    type: Sequelize.STRING,
+    type: STRING,
   },
   company: {
-    type: Sequelize.STRING,
+    type: STRING,
   },
   address: {
-    type: Sequelize.STRING,
+    type: STRING,
   },
   location: {
-    type: Sequelize.STRING,
+    type: STRING,
   },
   salary: {
-    type: Sequelize.STRING,
+    type: STRING,
   },
   about: {
-    type: Sequelize.STRING,
+    type: STRING,
   },
   role: {
-    type: Sequelize.STRING,
+    type: STRING,
   },
   managedBy: {
-    type: Sequelize.STRING,
+    type: STRING,
     references: {
       model: "employees",
       key: "id",
     },
   },
   createdAt: {
-    type: Sequelize.STRING,
+    type: STRING,
   },
   updatedAt: {
-    type: Sequelize.STRING,
+    type: STRING,
   },
   avatar: {
-    type: Sequelize.STRING,
+    type: STRING,
   },
+});
+
+Employee.hasMany(Employee, {
+  as: "children",
+  foreignKey: "managedBy",
+  sourceKey: "id",
+  useJunctionTable: false,
+});
+Employee.belongsTo(Employee, {
+  foreignKey: "managedBy",
+  targetKey: "id",
 });
 
 export default Employee;
