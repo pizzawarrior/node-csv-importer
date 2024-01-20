@@ -21,15 +21,15 @@
 * React is installed in the frontend and is waiting to be built out
 
 ### MVP:
-* Rebuild schema to include our 'Customer' info found in the 'events.csv' file
-* Drop current db and rebuild it, vfy successful connection to db inside Docker
-* Containerize the API
-* Containerize React
-* Build out React frontend
-* Test the csv import function
-* Test that data gets added to the db
-* Render the data in the browser
-* Make frontend 'nice-enough' visually, inline with the aesthetics of a certain company
+1. Rebuild schema to include our 'Customer' info found in the 'events.csv' file
+2. Drop current db and rebuild it, vfy successful connection to db inside Docker
+3. Containerize the API
+4. Containerize React
+5. Build out React frontend
+6. Test the csv import function
+7. Test that data gets added to the db
+8. Render the data in the browser
+9. Make frontend 'nice-enough' visually, inline with the aesthetics of a certain company
 
 ### Nice to haves:
 * Use PM2 for production
